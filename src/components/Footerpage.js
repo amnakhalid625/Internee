@@ -40,7 +40,7 @@ export default function Footer() {
 
       {/* Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 pb-10">
-        {/* Left: Logo + Description */}
+        {/*  Logo,Description */}
         <div>
           <div className="flex items-center space-x-3 mb-4">
             <img src="/logo.png" alt="Logo" className="w-12 h-12" />
@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Middle: Company Links */}
+        {/*  Company Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-white">Company</h3>
           <ul className="space-y-2 text-gray-400">
@@ -82,7 +82,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Right: Resources Links */}
+        {/* Right:  */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-white">Resources</h3>
           <ul className="space-y-2 text-gray-400">
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom: Copyright */}
+      {/* Bottom */}
       <div className="border-t border-gray-700 pt-4 mt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
         <span>© 2025 Internee.pk — All rights reserved</span>
         <div className="flex space-x-4 mt-2 md:mt-0">

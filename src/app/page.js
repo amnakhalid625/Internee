@@ -1,4 +1,5 @@
 import Cardpage from "@/components/Cardpage";
+import Footer from "@/components/Footerpage";
 import Page from "@/components/Heropage.js";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   
 <Page /> 
 <Cardpage />
+<Footer />
   
   </>
   );

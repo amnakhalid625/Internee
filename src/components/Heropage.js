@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+
 const Hero = () => {
   const categories = [
     { name: 'Tech', icon: '💻', count: '1,200+' },
@@ -141,7 +142,15 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+
+
+        <Link href="/webdesigndiscover" className="bg-blue-500 text-white px-4 py-2 rounded">
+        Explore Web Design Internships
+      </Link>
     </section>
+
+    
   );
 };
 

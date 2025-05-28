@@ -5,7 +5,7 @@ import Image from 'next/image';
 // Replace these with your actual image paths
 import photoshopImg from '/public/images/ps.png';
 import illustratorImg from '/public/images/illustration.png';
-import mayaImg from '/public/images/maya.png';
+import mayaImg from '/public/images/maya.webp';
 
 const internships = [
   {

@@ -14,32 +14,38 @@ const services = [
   {
     title: 'Web Design',
     description: 'Crafting digital experiences that captivate and convert with pixel-perfect responsive designs.',
-    image: webDesignImg
+    image: webDesignImg,
+    icon: '💎'
   },
   {
     title: 'SEO Optimization',
     description: 'Climbing search rankings with data-driven strategies that put you ahead of competitors.',
-    image: seoImg
+    image: seoImg,
+    icon: '📈'
   },
   {
     title: 'Social Media Marketing',
     description: 'Amplifying your brand voice across platforms to create meaningful engagement.',
-    image: socialMediaImg
+    image: socialMediaImg,
+    icon: '📱'
   },
   {
     title: 'Email Marketing',
     description: 'Nurturing relationships through personalized campaigns that drive repeat business.',
-    image: emailImg
+    image: emailImg,
+    icon: '✉️'
   },
   {
     title: 'PPC Advertising',
     description: 'Precision-targeted ads that deliver maximum ROI from your advertising budget.',
-    image: ppcImg
+    image: ppcImg,
+    icon: '🎯'
   },
   {
     title: 'App Development',
     description: 'Building intuitive mobile experiences that users love and keep coming back to.',
-    image: appDevImg
+    image: appDevImg,
+    icon: '📲'
   },
 ];
 
@@ -52,9 +58,16 @@ const cardVariants = {
   }
 };
 
+const hoverVariants = {
+  hover: { 
+    y: -10,
+    boxShadow: '0 20px 25px -5px rgba(81, 42, 140, 0.25), 0 10px 10px -5px rgba(81, 42, 140, 0.1)'
+  }
+};
+
 export default function CardPage() {
   return (
-    <div className="min-h-screen bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -63,10 +76,10 @@ export default function CardPage() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-[#512A8C]">Premium</span> Services
+            Our <span className="text-primary">Digital</span> Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Elevate your digital presence with our exclusive solutions
+            Transform your online presence with our expert solutions
           </p>
         </motion.div>
 
@@ -76,33 +89,59 @@ export default function CardPage() {
               key={index}
               initial="offscreen"
               whileInView="onscreen"
+              whileHover="hover"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
-              className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-500 bg-white"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 bg-white border border-gray-100 hover:border-primary/20"
             >
-              {/* Image without overlay */}
+              {/* Primary Color Overlay on Hover */}
+              <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+              
+              {/* Floating Icon */}
+              <motion.div 
+                className="absolute -top-5 -right-5 text-6xl opacity-20 group-hover:opacity-30 text-primary transition-all duration-700 group-hover:scale-110"
+                initial={{ rotate: -15 }}
+                whileHover={{ rotate: 0 }}
+              >
+                {service.icon}
+              </motion.div>
+
+              {/* Image with Glow Effect */}
               <div className="relative h-48 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
                 <Image 
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6 bg-white">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
+              <div className="p-6 relative z-0 bg-white group-hover:bg-white/95 transition-all duration-500">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-6 group-hover:text-gray-700 transition-colors">
+                  {service.description}
+                </p>
 
-                <button className="w-full py-3 px-6 rounded-lg bg-[#512A8C] text-white font-medium hover:bg-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-[0_0_15px_rgba(81,42,140,0.7)]">
-                  <span>Apply Now</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
+                <motion.button 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full py-3 px-6 rounded-lg bg-primary text-white font-medium hover:bg-primary-dark transition-all duration-300 flex items-center justify-center space-x-2 group-hover:shadow-[0_0_15px_rgba(81,42,140,0.3)]"
+                >
+                  <span>Discover More</span>
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
+                  >
+                    →
+                  </motion.span>
+                </motion.button>
               </div>
-            </motion.div>
+
+             </motion.div>
           ))}
         </div>
       </div>

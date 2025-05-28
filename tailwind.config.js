@@ -6,14 +6,20 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        primary: 'var(--primary-color)',
-        text: 'var(--text-color)',
-        background: 'var(--background-color)',
-      },
+theme: {
+  extend: {
+    fontFamily: {
+      geist: ['var(--font-geist-sans)'],
+      mono: ['var(--font-geist-mono)'],
+      poppins: ['Poppins', 'sans-serif'],
+    },
+    colors: {
+      primary: 'var(--primary-color)',
+      text: 'var(--text-color)',
+      background: 'var(--background-color)',
     },
   },
+},
+
   plugins: [],
 }

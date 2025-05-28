@@ -121,6 +121,7 @@ export default function WebDesignDiscover() {
             Join our community of creative professionals and take the first step toward your dream career.
           </p>
           <motion.button
+          link="/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-medium shadow-lg transition-all"

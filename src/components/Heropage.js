@@ -1,6 +1,8 @@
 'use client'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import CardPage from './Cardpage';
+import Footer from './Footerpage';
 
 
 const Hero = () => {
@@ -14,6 +16,7 @@ const Hero = () => {
   ];
 
   return (
+    <>
     <section className="relative bg-gradient-to-b from-white to-purple-50 overflow-hidden py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -145,10 +148,13 @@ const Hero = () => {
 
 
 
-        <Link href="/webdesigndiscover" className="bg-blue-500 text-white px-4 py-2 rounded">
-        Explore Web Design Internships
-      </Link>
+
+      
     </section>
+<CardPage />
+<Footer />
+  
+   </> 
 
     
   );

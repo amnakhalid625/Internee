@@ -43,7 +43,7 @@ export default function GraphicDesignDiscover() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="text-primary">Web Design</span> Discover
+            <span className="text-primary">Graphic Design</span> Discover
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore internship opportunities to elevate your design career

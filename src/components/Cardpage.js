@@ -30,8 +30,8 @@ const services = [
     icon: '📱'
   },
   {
-    title: 'Email Marketing',
-    description: 'Nurturing relationships through personalized campaigns that drive repeat business.',
+    title: 'Graphic Design',
+    description: 'Visual storytelling that transforms ideas into stunning graphics and brand identities.',
     image: emailImg,
     icon: '✉️'
   },

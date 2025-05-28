@@ -153,6 +153,8 @@ const Hero = () => {
     </section>
 <CardPage />
 <Footer />
+
+
   
    </> 
 

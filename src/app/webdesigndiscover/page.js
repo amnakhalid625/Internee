@@ -3,9 +3,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 // Replace these with your actual image paths
-import photoshopImg from '/public/images/ps.png';
-import illustratorImg from '/public/images/illustration.png';
-import mayaImg from '/public/images/maya.webp';
+import photoshopImg from '/public/images/web1.png';
+import illustratorImg from '/public/images/web2.png';
+import mayaImg from '/public/images/web3.jpg';
+import angularImg from '/public/images/web4.jpeg';
+import djangoImg from '/public/images/web5.png';
+import dotnetImg from '/public/images/web6.png';
+import nextImg from '/public/images/web7.png';
+
 
 const internships = [
   {
@@ -28,10 +33,38 @@ const internships = [
     duration: "2 months",
     image: mayaImg,
     tags: ["3D Modeling", "Animation", "Visual Effects"]
+  },
+  {
+    title: "Angular Development",
+    description: "Build dynamic single-page applications with Angular framework",
+    duration: "3 months",
+    image: angularImg,
+    tags: ["Frontend", "TypeScript", "SPA"]
+  },
+  {
+    title: "Django Backend",
+    description: "Create robust web applications with Python and Django",
+    duration: "3 months",
+    image: djangoImg,
+    tags: ["Python", "Backend", "Fullstack"]
+  },
+  {
+    title: ".NET Development",
+    description: "Develop enterprise applications using Microsoft's .NET framework",
+    duration: "4 months",
+    image: dotnetImg,
+    tags: ["C#", "Backend", "Enterprise"]
+  },
+    {
+    title: "Next.js Development",
+    description: "Build fast and scalable web applications with Next.js",
+    duration: "4 months",
+    image: nextImg,
+    tags: ["JavaScript", "frontend", " Next.js"]
   }
 ];
 
-export default function GraphicDesignDiscover() {
+export default function webDesignDiscover() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -43,10 +76,10 @@ export default function GraphicDesignDiscover() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="text-primary">Graphic Design</span> Discover
+            <span className="text-primary">Tech Stack</span> Discover
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore internship opportunities to elevate your design career
+            Explore internship opportunities across various technology domains
           </p>
         </motion.div>
 
@@ -106,8 +139,6 @@ export default function GraphicDesignDiscover() {
           ))}
         </div>
 
-        {/* CTA Section */}
-     
       </div>
     </div>
   );
